@@ -1,0 +1,14 @@
+Package: SigniSite
+Type: Package
+Title: Analysis of Genotype-phenotype correlations in protein multiple sequence alignments
+Version: 0.1.0
+Author: Leon Eyrich Jessen
+Maintainer: Leon Eyrich Jessen <leon.jessen@gmail.com>
+Description: SigniSite performs residue level genotype phenotype correlation in protein multiple sequence alignments by identifying amino acid residues significantly associated with the phenotype of the data set.
+    Input is a protein multiple sequence alignment in FASTA format. The phenotype is represented by a real-valued numerical parameter placed white-space separated, last in the identifier of each sequence
+License: file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/leonjessen/SigniSite
+BugReports: https://github.com/leonjessen/SigniSite/issues
+RoxygenNote: 6.0.1

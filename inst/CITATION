@@ -1,0 +1,21 @@
+citHeader("To cite SigniSite in publications use:")
+
+citEntry(entry = "Article",
+  title        = "{SigniSite}: Identification of residue-level genotype-phenotype correlations in protein multiple sequence alignments",
+  author       = personList(as.person("Leon Eyrich Jessen"),
+                   as.person("Ilka Hoof"),
+                   as.person("Ole Lund"),
+                   as.person("Morten Nielsen")),
+  journal      = "Nucleic Acids Research",
+  year         = "2013",
+  volume       = "41",
+  number       = "W1",
+  pages        = "W286-W291",
+  url          = "https://doi.org/10.1093/nar/gkt497",
+
+  textVersion  =
+  paste("Leon Eyrich Jessen, Ilka Hoof, Ole Lund and Morten Nielsen (2013).",
+        "SigniSite: Identification of residue-level genotype-phenotype correlations in protein multiple sequence alignments.",
+        "Nucleic Acids Research, 41(W1), W286-W291.",
+        "URL https://doi.org/10.1093/nar/gkt497.")
+)
