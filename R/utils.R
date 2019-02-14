@@ -30,7 +30,7 @@
 }
 
 # Create the main logo for SigniSite
-# Wed Feb 13 09:54:27 2019 ------------------------------
+# Thu Feb 14 08:55:56 2019 ------------------------------
 # Run as .create_main_logo_png()
 .create_main_logo_png = function(){
 
@@ -41,7 +41,9 @@
   res_chars = AMINOACIDS$one
 
   # Set matrix of negative residue scores
-  res_mat = matrix(data = -abs(rnorm(180)), nrow = 20, ncol = 9)
+  m = 20
+  n = 9
+  res_mat = matrix(data = -abs(rnorm(m*n))/5, nrow = m, ncol = n)
   rownames(res_mat) = res_chars
   colnames(res_mat) = paste0('p_', 1:9)
 
