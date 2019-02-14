@@ -8,6 +8,8 @@ correct_z_matrix(z, method = "bonferroni")
 }
 \arguments{
 \item{z}{A matrix of z-scores}
+
+\item{method}{method for correcting for multiple testing, one of c("holm", "hochberg", "hommel", "bonferroni", "BH", "BY", "fdr", "none"), see ?p.adjust for more. Default: bonferroni}
 }
 \value{
 A matrix of corrected z-scores

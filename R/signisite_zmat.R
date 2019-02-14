@@ -11,7 +11,7 @@
 #' @return A matrix of SigniSite z-scores, corrected for multiple testing and truncated to significant positions
 #'
 #' @examples
-#' signisite_zmat(file = 'path/to/my/msa_file.fsa')
+#' signisite_zmat(file = system.file(package = "SigniSite", "/signisite_alignment.fsa"))
 #'
 #' @export
 signisite_zmat = function(file, method = 'bonferroni', alpha = 0.05){

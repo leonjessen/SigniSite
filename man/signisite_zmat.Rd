@@ -20,6 +20,6 @@ A matrix of SigniSite z-scores, corrected for multiple testing and truncated to 
 Run the SigniSite workflow
 }
 \examples{
-signisite_zmat(file = 'path/to/my/msa_file.fsa')
+signisite_zmat(file = system.file(package = "SigniSite", "/signisite_alignment.fsa"))
 
 }

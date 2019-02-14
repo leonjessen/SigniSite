@@ -9,7 +9,7 @@
 #' @return A data frame of FASTA headers and sequences
 #'
 #' @examples
-#' read_fasta(file = 'path/to/my/msa_file.fsa')
+#' read_fasta(file = system.file(package = "SigniSite", "/signisite_alignment.fsa"))
 #'
 #' @export
 read_fasta = function(file){
