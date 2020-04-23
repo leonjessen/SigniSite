@@ -1,21 +1,31 @@
 
-SigniSite <a href="http://www.cbs.dtu.dk/services/SigniSite/"><img src="man/figures/signisite_hex_logo.png" align="right" height="200" /></a>
-=============================================================================================================================================
+# SigniSite <a href="http://www.cbs.dtu.dk/services/SigniSite/"><img src="man/figures/signisite_hex_logo.png" align="right" height="200" /></a>
 
-By popular demand, this is an `R` implementation of the [SigniSite 2.1 Server: Residue level genotype phenotype correlation in protein multiple sequence alignments](http://www.cbs.dtu.dk/services/SigniSite/). For details on the method, please see the original research paper [SigniSite: Identification of residue-level genotype-phenotype correlations in protein multiple sequence alignments](https://academic.oup.com/nar/article/41/W1/W286/1111259) (See [Citation](#Citation))
+By popular demand, this is an `R` implementation of the [SigniSite 2.1
+Server: Residue level genotype phenotype correlation in protein multiple
+sequence alignments](http://www.cbs.dtu.dk/services/SigniSite/). For
+details on the method, please see the original research paper
+[SigniSite: Identification of residue-level genotype-phenotype
+correlations in protein multiple sequence
+alignments](https://academic.oup.com/nar/article/41/W1/W286/1111259)
+(See [Citation](#Citation))
 
-Overview
---------
+## Overview
 
-SigniSite performs residue level genotype phenotype correlation in protein multiple sequence alignments by identifying amino acid residues significantly associated with the phenotype of the data set. Input is a protein multiple sequence alignment in FASTA format. The phenotype is represented by a real-valued numerical value placed last in the identifier of each sequence (white-space separated).
+SigniSite performs residue level genotype phenotype correlation in
+protein multiple sequence alignments by identifying amino acid residues
+significantly associated with the phenotype of the data set. Input is a
+protein multiple sequence alignment in FASTA format. The phenotype is
+represented by a real-valued numerical value placed last in the
+identifier of each sequence (white-space separated).
 
-License
--------
+## License
 
-SigniSite is free to use for academic users as [described in the license](LICENSE); other users are requested to contact Software Package Manager at <software@cbs.dtu.dk>.
+SigniSite is free to use for academic users as [described in the
+license](LICENSE); other users are requested to contact Software Package
+Manager at <health-software@dtu.dk>.
 
-Installation
-------------
+## Installation
 
 ``` r
 # The development version from GitHub:
@@ -23,8 +33,7 @@ install.packages("devtools")
 devtools::install_github("leonjessen/SigniSite")
 ```
 
-Usage
------
+## Usage
 
 Once installed, `SigniSite` is loaded like so
 
@@ -32,7 +41,8 @@ Once installed, `SigniSite` is loaded like so
 library("SigniSite")
 ```
 
-There are two options for using `SigniSite`, either simply call `SigniSite` with default options like so:
+There are two options for using `SigniSite`, either simply call
+`SigniSite` with default options like so:
 
 ``` r
 # Create the matrix of SigniSite z-scores
@@ -45,10 +55,12 @@ plot_signisite_logo(z)
 Or go through the following workflow:
 
 1.  `read_fasta()`: Reads a multiple sequence alignment in FASTA format
-2.  `get_values()`: Retrieve the sequence associated values from FASTA headers
+2.  `get_values()`: Retrieve the sequence associated values from FASTA
+    headers
 3.  `get_signisite_zscores()`: Compute the SigniSite z-scores
 4.  `correct_z_matrix()`: Correct the z-scores for multiple testing
-5.  `rm_ns_positions()`: Remove any positions, where no residues are significantly associated with the sequence associated values
+5.  `rm_ns_positions()`: Remove any positions, where no residues are
+    significantly associated with the sequence associated values
 6.  `plot_signisite_logo()`: Visualise the results
 
 The following is a walk through of the above workflow:
@@ -60,7 +72,9 @@ The following is a walk through of the above workflow:
 msa = read_fasta(file = 'data/signisite_alignment.fsa')
 ```
 
-If you do not have your own alignment file, but simply want to test the `SigniSite` package, then you can use the build in example alignment like so:
+If you do not have your own alignment file, but simply want to test the
+`SigniSite` package, then you can use the build in example alignment
+like so:
 
 ``` r
 msa = ALIGNMENT
@@ -181,12 +195,10 @@ library('ggseqlogo')
 plot_signisite_logo(z = z_mat_adj_sp)
 ```
 
-<img src="README_files/figure-markdown_github/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
+<img src="README_files/figure-gfm/unnamed-chunk-12-1.png" style="display: block; margin: auto;" />
 
-Citation
---------
-
-When using SigniSite for publications, please cite the original reserach paper:
+\#\#Citation When using SigniSite for publications, please cite the
+original reserach paper:
 
 ``` r
 citation("SigniSite")
@@ -214,6 +226,9 @@ citation("SigniSite")
     ##     url = {https://doi.org/10.1093/nar/gkt497},
     ##   }
 
-Furthermore, `SigniSite` uses `ggseqlogo` for visualisation, so please also cite:
+Furthermore, `SigniSite` uses `ggseqlogo` for visualisation, so please
+also cite:
 
-[`Wagih O. ggseqlogo: a versatile R package for drawing sequence logos. Bioinformatics. 2017 Nov 15;33(22):3645-3647. doi: 10.1093/bioinformatics/btx469.`](https://academic.oup.com/bioinformatics/article/33/22/3645/3980251)
+[Wagih O. ggseqlogo: a versatile R package for drawing sequence logos.
+Bioinformatics. 2017 Nov 15;33(22):3645-3647.
+doi: 10.1093/bioinformatics/btx469.](https://academic.oup.com/bioinformatics/article/33/22/3645/3980251)
