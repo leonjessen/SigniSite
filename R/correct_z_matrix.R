@@ -5,6 +5,7 @@
 #' Correct a matrix of z-scores for multiple testing
 #'
 #' @param z A matrix of z-scores
+#' @inheritParams signisite_zmat
 #'
 #' @return A matrix of corrected z-scores
 #'

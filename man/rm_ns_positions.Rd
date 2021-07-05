@@ -8,6 +8,8 @@ rm_ns_positions(z, alpha = 0.05)
 }
 \arguments{
 \item{z}{A matrix of z-scores}
+
+\item{alpha}{the level of significance. Default: 0.05}
 }
 \value{
 A matrix of z-scores, with non-significant positions removed

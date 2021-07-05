@@ -5,6 +5,7 @@
 #' Remove positions where no significant association was identified
 #'
 #' @param z A matrix of z-scores
+#' @inheritParams signisite_zmat
 #'
 #' @return A matrix of z-scores, with non-significant positions removed
 #'

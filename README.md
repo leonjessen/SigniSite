@@ -29,8 +29,7 @@ Manager at <health-software@dtu.dk>.
 
 ``` r
 # The development version from GitHub:
-install.packages("devtools")
-devtools::install_github("leonjessen/SigniSite")
+source("https://install-github.me/leonjessen/SigniSite")
 ```
 
 ## Usage
@@ -46,7 +45,7 @@ There are two options for using `SigniSite`, either simply call
 
 ``` r
 # Create the matrix of SigniSite z-scores
-z = signisite_zmat(file = 'path/to/my/msa_file.fsa', method = 'bonferroni', alpha = 0.05)
+z = signisite_zmat(file = system.file(package = "SigniSite", "/signisite_alignment.fsa"), method = 'bonferroni', alpha = 0.05)
 
 # Visualise z-score matrix as a logo plot
 plot_signisite_logo(z)

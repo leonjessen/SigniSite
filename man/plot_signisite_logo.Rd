@@ -18,6 +18,6 @@ Plot the results of a SigniSite analysis as a sequence logo
 \examples{
 z_mat = get_signisite_zscores(ALIGNMENT$sequence, get_values(ALIGNMENT$fasta_header))
 z_mat_sp = rm_ns_positions(z_mat, alpha = 0.05)
-plot_SigniSite_logo(z_mat_sp)
+plot_signisite_logo(z_mat_sp)
 
 }
